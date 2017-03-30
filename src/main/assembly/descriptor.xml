@@ -1,0 +1,30 @@
+<assembly>
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <includes>
+                <include>*:*</include>
+            </includes>
+            <excludes>
+                <exclude>${groupId}:${artifactId}</exclude>
+            </excludes>
+            <unpack>false</unpack>
+            <outputDirectory>lib</outputDirectory>
+            <unpackOptions>
+                <filtered>true</filtered>
+            </unpackOptions>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory></outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
